@@ -1,0 +1,88 @@
+// =====================================================================================
+// Medidas DAX para un modelo semántico de Power BI sobre la capa Gold (modelo v2).
+// ESTADO: PREPARADO, NO EJECUTADO. No se ha creado ningún modelo semántico ni informe de
+// Power BI (la cuenta no tiene licencia Pro y la capacidad de Fabric está en pausa).
+// Equivalen a las medidas de la capa semántica TypeScript (packages/core/src/kpis.ts), que sí
+// están probadas y validadas contra el SQL de Gold (121/121 KPI).
+//
+// Modelo previsto (relaciones 1:N, filtro en una dirección):
+//   dim_fecha[fecha] → fact_ocupacion_mensual[fecha], fact_recibo[fecha_emision], fact_pago[fecha_pago]
+//   dim_local[local_sk] → todos los hechos · dim_zona → dim_local · dim_planta → dim_zona
+//   dim_estado_comercial[estado_sk] → fact_ocupacion_mensual[estado_sk]
+// =====================================================================================
+
+// Fecha de corte = último día del periodo filtrado (la instantánea es semiaditiva en el tiempo)
+Corte := MAX ( dim_fecha[fecha] )
+
+// --------------------------------------------------------------------- Ocupación
+M2 comercializables :=
+CALCULATE (
+    SUM ( fact_ocupacion_mensual[area_m2] ),
+    dim_estado_comercial[comercializable] = TRUE (),
+    LASTNONBLANK ( fact_ocupacion_mensual[fecha], 1 )
+)
+
+M2 ocupados :=
+CALCULATE (
+    SUM ( fact_ocupacion_mensual[area_m2] ),
+    dim_estado_comercial[cuenta_como_ocupado] = TRUE (),
+    LASTNONBLANK ( fact_ocupacion_mensual[fecha], 1 )
+)
+
+% Ocupación := DIVIDE ( [M2 ocupados], [M2 comercializables] )
+
+Locales ocupados :=
+CALCULATE (
+    COUNTROWS ( fact_ocupacion_mensual ),
+    dim_estado_comercial[codigo] = "ocupado",
+    LASTNONBLANK ( fact_ocupacion_mensual[fecha], 1 )
+)
+
+Locales disponibles :=
+CALCULATE (
+    COUNTROWS ( fact_ocupacion_mensual ),
+    dim_estado_comercial[codigo] = "disponible",
+    LASTNONBLANK ( fact_ocupacion_mensual[fecha], 1 )
+)
+
+// --------------------------------------------------------------------- Renta y contratos
+Renta mensual :=
+CALCULATE (
+    SUM ( fact_ocupacion_mensual[canon_mensual] ),
+    LASTNONBLANK ( fact_ocupacion_mensual[fecha], 1 )
+)
+
+Renta por m² := DIVIDE ( [Renta mensual], [M2 ocupados] )
+
+Contratos por vencer 90 días :=
+VAR c = [Corte]
+RETURN
+    COUNTROWS (
+        FILTER (
+            fact_contrato,
+            fact_contrato[fecha_inicio] <= c
+                && fact_contrato[fecha_fin] >= c
+                && ( ISBLANK ( fact_contrato[fecha_terminacion] ) || fact_contrato[fecha_terminacion] > c )
+                && fact_contrato[fecha_fin] - c <= 90
+        )
+    )
+
+// --------------------------------------------------------------------- Ingresos y cobros
+Facturado := SUM ( fact_recibo[importe] )          // filtrado por dim_fecha sobre fecha_emision
+
+Cobrado := SUM ( fact_pago[importe] )              // relación inactiva con dim_fecha → USERELATIONSHIP si hace falta
+
+Facturado 12 meses :=
+CALCULATE ( [Facturado], DATESINPERIOD ( dim_fecha[fecha], [Corte], -12, MONTH ) )
+
+Vencido :=
+VAR c = [Corte]
+RETURN
+    SUMX (
+        FILTER ( ALL ( fact_recibo ), fact_recibo[fecha_vencimiento] < c ),
+        VAR pagado =
+            CALCULATE ( SUM ( fact_pago[importe] ), fact_pago[fecha_pago] <= c )
+        RETURN MAX ( 0, fact_recibo[importe] - pagado )
+    )
+
+% Morosidad := DIVIDE ( [Vencido], [Facturado 12 meses] )

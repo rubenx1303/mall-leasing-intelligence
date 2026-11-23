@@ -1,0 +1,9 @@
+{
+  "descripcion": "Entorno de DESARROLLO en Fabric. Copiar a entorno.dev.json (no versionado) y rellenar. Identificadores no secretos.",
+  "tenant": "<dominio-o-id-del-inquilino>",
+  "capacidad": { "nombre": "<nombre-capacidad-fabric>", "sku": "F2", "region": "<region-azure>" },
+  "workspaceId": "<guid-area-de-trabajo>",
+  "workspaceNombre": "Mall Intelligence - DEV",
+  "lakehouse": { "nombre": "LH_Mall", "id": "<guid-lakehouse>" },
+  "warehouse": { "nombre": "WH_Mall" }
+}

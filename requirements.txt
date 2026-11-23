@@ -1,0 +1,7 @@
+# Herramientas Python locales (Bronze, despliegue y SQL en Fabric)
+pyarrow==26.0.1
+psycopg[binary]==3.3.9
+pandas==3.1.1
+azure-identity==1.27.0
+azure-storage-file-datalake==12.26.1
+mssql-python==1.18.0

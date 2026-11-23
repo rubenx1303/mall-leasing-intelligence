@@ -1,0 +1,29 @@
+{
+  "name": "mall-leasing-intelligence",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Plataforma de inteligencia comercial para la comercialización de locales (datos ficticios)",
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:seed": "npm run seed -w @mli/api",
+    "dev:api": "npm run dev -w @mli/api",
+    "dev:web": "npm run dev -w @mli/web",
+    "build": "npm run build -w @mli/web",
+    "bronze": "node tools/python.mjs fabric/bronze/exportar_bronze.py --verificar",
+    "esperados": "npm run esperados -w @mli/api",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "pipeline": "node tools/python.mjs pipeline/ejecutar.py",
+    "instantanea": "npm run instantanea -w @mli/api",
+    "demo:restaurar": "npm run db:up && npm run db:seed && npm run esperados && npm run pipeline && npm run instantanea"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

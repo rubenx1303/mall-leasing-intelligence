@@ -1,0 +1,745 @@
+{
+  "descripcion": "KPI de referencia de la capa semántica (packages/core) sobre el conjunto FICTICIO. Gold en SQL debe coincidir.",
+  "version_modelo": "2",
+  "semilla": 14,
+  "fecha_corte": "2026-11-20",
+  "tolerancia": {
+    "importes_y_recuentos": 0,
+    "m2": 0.005,
+    "porcentajes": 1e-9
+  },
+  "resumen_legible": {
+    "pct_ocupacion": 0.7916989914662529,
+    "renta_mensual": 551834000,
+    "vencido": 222885000,
+    "meses_facturados": 32
+  },
+  "kpis": [
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "locales_total",
+      "valor": 62
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "locales_comercializables",
+      "valor": 59
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "locales_ocupados",
+      "valor": 51
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "locales_reservados",
+      "valor": 1
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "locales_disponibles",
+      "valor": 7
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "m2_comercializables",
+      "valor": 10312
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "m2_ocupados",
+      "valor": 8164
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7916989914662529
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "renta_mensual",
+      "valor": 551834000
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "contratos_vigentes",
+      "valor": 51
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "contratos_por_vencer_90",
+      "valor": 8
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "facturado_total",
+      "valor": 17713922000
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "facturado_12m",
+      "valor": 6625902000
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "cobrado_total",
+      "valor": 17414845000
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "vencido",
+      "valor": 222885000
+    },
+    {
+      "ambito": "global",
+      "clave": "",
+      "kpi": "tasa_morosidad",
+      "valor": 0.03363843896272538
+    },
+    {
+      "ambito": "planta",
+      "clave": "P1",
+      "kpi": "locales_ocupados",
+      "valor": 30
+    },
+    {
+      "ambito": "planta",
+      "clave": "P1",
+      "kpi": "m2_ocupados",
+      "valor": 5316
+    },
+    {
+      "ambito": "planta",
+      "clave": "P1",
+      "kpi": "renta_mensual",
+      "valor": 382639000
+    },
+    {
+      "ambito": "planta",
+      "clave": "P1",
+      "kpi": "vencido",
+      "valor": 181085000
+    },
+    {
+      "ambito": "planta",
+      "clave": "P2",
+      "kpi": "locales_ocupados",
+      "valor": 21
+    },
+    {
+      "ambito": "planta",
+      "clave": "P2",
+      "kpi": "m2_ocupados",
+      "valor": 2848
+    },
+    {
+      "ambito": "planta",
+      "clave": "P2",
+      "kpi": "renta_mensual",
+      "valor": 169195000
+    },
+    {
+      "ambito": "planta",
+      "clave": "P2",
+      "kpi": "vencido",
+      "valor": 41800000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AO",
+      "kpi": "locales_ocupados",
+      "valor": 1
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AO",
+      "kpi": "m2_ocupados",
+      "valor": 1496
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AO",
+      "kpi": "renta_mensual",
+      "valor": 62832000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AE",
+      "kpi": "locales_ocupados",
+      "valor": 1
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AE",
+      "kpi": "m2_ocupados",
+      "valor": 1496
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-AE",
+      "kpi": "renta_mensual",
+      "valor": 56848000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GN",
+      "kpi": "locales_ocupados",
+      "valor": 8
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GN",
+      "kpi": "m2_ocupados",
+      "valor": 1024
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GN",
+      "kpi": "renta_mensual",
+      "valor": 118768000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GS",
+      "kpi": "locales_ocupados",
+      "valor": 6
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GS",
+      "kpi": "m2_ocupados",
+      "valor": 784
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-GS",
+      "kpi": "renta_mensual",
+      "valor": 79600000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-BC",
+      "kpi": "locales_ocupados",
+      "valor": 10
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-BC",
+      "kpi": "m2_ocupados",
+      "valor": 480
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-BC",
+      "kpi": "renta_mensual",
+      "valor": 58883000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-PC",
+      "kpi": "locales_ocupados",
+      "valor": 4
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-PC",
+      "kpi": "m2_ocupados",
+      "valor": 36
+    },
+    {
+      "ambito": "zona",
+      "clave": "P1-PC",
+      "kpi": "renta_mensual",
+      "valor": 5708000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AO",
+      "kpi": "locales_ocupados",
+      "valor": 0
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AO",
+      "kpi": "m2_ocupados",
+      "valor": 0
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AO",
+      "kpi": "renta_mensual",
+      "valor": 0
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AE",
+      "kpi": "locales_ocupados",
+      "valor": 1
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AE",
+      "kpi": "m2_ocupados",
+      "valor": 1496
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-AE",
+      "kpi": "renta_mensual",
+      "valor": 47872000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-GN",
+      "kpi": "locales_ocupados",
+      "valor": 5
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-GN",
+      "kpi": "m2_ocupados",
+      "valor": 672
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-GN",
+      "kpi": "renta_mensual",
+      "valor": 56405000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-IS",
+      "kpi": "locales_ocupados",
+      "valor": 5
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-IS",
+      "kpi": "m2_ocupados",
+      "valor": 80
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-IS",
+      "kpi": "renta_mensual",
+      "valor": 9895000
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-FC",
+      "kpi": "locales_ocupados",
+      "valor": 10
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-FC",
+      "kpi": "m2_ocupados",
+      "valor": 600
+    },
+    {
+      "ambito": "zona",
+      "clave": "P2-FC",
+      "kpi": "renta_mensual",
+      "valor": 55023000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-04",
+      "kpi": "pct_ocupacion",
+      "valor": 0.8063421256788208
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-04",
+      "kpi": "renta_mensual",
+      "valor": 439763000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-05",
+      "kpi": "pct_ocupacion",
+      "valor": 0.8567688130333592
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-05",
+      "kpi": "renta_mensual",
+      "valor": 494121000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-06",
+      "kpi": "pct_ocupacion",
+      "valor": 0.8676299456943367
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-06",
+      "kpi": "renta_mensual",
+      "valor": 506148000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-07",
+      "kpi": "pct_ocupacion",
+      "valor": 0.8676299456943367
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-07",
+      "kpi": "renta_mensual",
+      "valor": 506148000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-08",
+      "kpi": "pct_ocupacion",
+      "valor": 0.8685027152831652
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-08",
+      "kpi": "renta_mensual",
+      "valor": 507578000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-09",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9010861132660978
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-09",
+      "kpi": "renta_mensual",
+      "valor": 537895000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-10",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9084561675717611
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-10",
+      "kpi": "renta_mensual",
+      "valor": 545049000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-11",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9286268425135764
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-11",
+      "kpi": "renta_mensual",
+      "valor": 564424000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-12",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9499612102404965
+    },
+    {
+      "ambito": "mes",
+      "clave": "2024-12",
+      "kpi": "renta_mensual",
+      "valor": 587538000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-01",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9515128006206361
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-01",
+      "kpi": "renta_mensual",
+      "valor": 589636000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-02",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9639255236617533
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-02",
+      "kpi": "renta_mensual",
+      "valor": 600686000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-03",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9515128006206361
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-03",
+      "kpi": "renta_mensual",
+      "valor": 590669000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-04",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9332816136539953
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-04",
+      "kpi": "renta_mensual",
+      "valor": 575837000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-05",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9332816136539953
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-05",
+      "kpi": "renta_mensual",
+      "valor": 575837000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-06",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9282389449185415
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-06",
+      "kpi": "renta_mensual",
+      "valor": 569337000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-07",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9282389449185415
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-07",
+      "kpi": "renta_mensual",
+      "valor": 569337000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-08",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9422032583397983
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-08",
+      "kpi": "renta_mensual",
+      "valor": 582555000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-09",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9538401861908457
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-09",
+      "kpi": "renta_mensual",
+      "valor": 593764000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-10",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9507370054305664
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-10",
+      "kpi": "renta_mensual",
+      "valor": 593690000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-11",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9615981380915438
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-11",
+      "kpi": "renta_mensual",
+      "valor": 607439000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-12",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9557796741660202
+    },
+    {
+      "ambito": "mes",
+      "clave": "2025-12",
+      "kpi": "renta_mensual",
+      "valor": 601677000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-01",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9511249030256013
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-01",
+      "kpi": "renta_mensual",
+      "valor": 597190000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-02",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9511249030256013
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-02",
+      "kpi": "renta_mensual",
+      "valor": 597190000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-03",
+      "kpi": "pct_ocupacion",
+      "valor": 0.9418153607447634
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-03",
+      "kpi": "renta_mensual",
+      "valor": 585950000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-04",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7819045771916214
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-04",
+      "kpi": "renta_mensual",
+      "valor": 531074000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-05",
+      "kpi": "pct_ocupacion",
+      "valor": 0.766388673390225
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-05",
+      "kpi": "renta_mensual",
+      "valor": 513992000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-06",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7672614429790535
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-06",
+      "kpi": "renta_mensual",
+      "valor": 515410000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-07",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7719162141194724
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-07",
+      "kpi": "renta_mensual",
+      "valor": 521506000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-08",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7719162141194724
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-08",
+      "kpi": "renta_mensual",
+      "valor": 521506000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-09",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7920868890612878
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-09",
+      "kpi": "renta_mensual",
+      "valor": 548093000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-10",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7750193948797518
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-10",
+      "kpi": "renta_mensual",
+      "valor": 532835000
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-11",
+      "kpi": "pct_ocupacion",
+      "valor": 0.7916989914662529
+    },
+    {
+      "ambito": "mes",
+      "clave": "2026-11",
+      "kpi": "renta_mensual",
+      "valor": 551834000
+    }
+  ]
+}

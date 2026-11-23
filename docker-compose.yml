@@ -1,0 +1,22 @@
+# Entorno de DESARROLLO. Contraseñas de ejemplo, solo para uso local.
+name: mall-leasing-intelligence
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: mli-postgres
+    environment:
+      POSTGRES_DB: mli
+      POSTGRES_USER: mli_owner
+      POSTGRES_PASSWORD: mli_owner_dev
+    ports:
+      - "127.0.0.1:54330:5432"
+    volumes:
+      - mli-pgdata:/var/lib/postgresql/data
+      - ./apps/api/db/00-roles.sql:/docker-entrypoint-initdb.d/00-roles.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mli_owner -d mli"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+volumes:
+  mli-pgdata:

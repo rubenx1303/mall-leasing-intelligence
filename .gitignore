@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vite/
+# Datos generados (lago local Bronze/Silver, exportaciones)
+data/
+fabric/bronze/out/
+# Identificadores del entorno de Fabric (usar fabric/entorno.example.json como plantilla)
+fabric/entorno.dev.json
+.venv/
+__pycache__/
